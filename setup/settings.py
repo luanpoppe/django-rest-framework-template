@@ -82,27 +82,27 @@ WSGI_APPLICATION = "setup.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-    'ENGINE': '...',
-        'NAME': "...",
-        'USER': "...",
-        'PASSWORD': os.environ['DATABASE_PASSWORD'],
-        'HOST': "...",
-        'PORT': 5432,
-        'OPTIONS': {
-            'sslmode': 'require',
-        }
-    }
-}
-
-# Se quiser utilizar a database inicial padrão do Django --> SQLite
 # DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
+#     'default': {
+#     'ENGINE': '...',
+#         'NAME': "...",
+#         'USER': "...",
+#         'PASSWORD': os.environ['DATABASE_PASSWORD'],
+#         'HOST': "...",
+#         'PORT': 5432,
+#         'OPTIONS': {
+#             'sslmode': 'require',
+#         }
 #     }
 # }
+
+# Se quiser utilizar a database inicial padrão do Django --> SQLite
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
 
 # Password validation
